@@ -10,10 +10,10 @@ function Timer(){
 
   function getTime(data) {
     const time = Date.parse(data) - Date.now()
-    setDays(Math.floor(time / (1000 * 60 * 60 * 24)));
-    setHours(Math.floor((time / (1000 * 60 * 60)) % 24));
-    setMinutes(Math.floor((time / 1000 / 60) % 60));
-    setSeconds(Math.floor((time / 1000) % 60));
+    setDays(Math.floor(time / (1000 * 60 * 60 * 24)))
+    setHours(Math.floor((time / (1000 * 60 * 60)) % 24))
+    setMinutes(Math.floor((time / 1000 / 60) % 60))
+    setSeconds(Math.floor((time / 1000) % 60))
 
   }
   useEffect(()=>{
