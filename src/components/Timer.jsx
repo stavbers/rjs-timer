@@ -19,7 +19,10 @@ function Timer(){
   useEffect(()=>{
     const interval = setInterval(()=> getTime(deadline), 1000)
     return ()=> {clearInterval(interval)}
-  },[])
+  },[deadline])
+  useEffect(()=> {
+    document.title = `${days}:${hours}:${minutes}:${seconds} Countdown`
+  })
 return (
   <div className="timer">{days}/d {hours}/h {minutes}/m {seconds}/s</div>
 )
